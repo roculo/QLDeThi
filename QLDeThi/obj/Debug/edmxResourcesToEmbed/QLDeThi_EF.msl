@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DETHI_DBModelStoreContainer" CdmEntityContainer="DETHI_DBEntities">
+    <EntitySetMapping Name="BangDiems">
+      <EntityTypeMapping TypeName="DETHI_DBModel.BangDiem">
+        <MappingFragment StoreEntitySet="BangDiem">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="BAITHI" ColumnName="BAITHI" />
+          <ScalarProperty Name="DIEM" ColumnName="DIEM" />
+          <ScalarProperty Name="NGAYTHI" ColumnName="NGAYTHI" />
+          <ScalarProperty Name="LAN" ColumnName="LAN" />
+          <ScalarProperty Name="MASV" ColumnName="MASV" />
+          <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BoDes">
+      <EntityTypeMapping TypeName="DETHI_DBModel.BoDe">
+        <MappingFragment StoreEntitySet="BoDe">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="MAGV" ColumnName="MAGV" />
+          <ScalarProperty Name="DAPAN" ColumnName="DAPAN" />
+          <ScalarProperty Name="D" ColumnName="D" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="B" ColumnName="B" />
+          <ScalarProperty Name="A" ColumnName="A" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="TRINHDO" ColumnName="TRINHDO" />
+          <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+          <ScalarProperty Name="CAUHOI" ColumnName="CAUHOI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoSoes">
+      <EntityTypeMapping TypeName="DETHI_DBModel.CoSo">
+        <MappingFragment StoreEntitySet="CoSo">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="TENCS" ColumnName="TENCS" />
+          <ScalarProperty Name="MACS" ColumnName="MACS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiaoViens">
+      <EntityTypeMapping TypeName="DETHI_DBModel.GiaoVien">
+        <MappingFragment StoreEntitySet="GiaoVien">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="HOCVI" ColumnName="HOCVI" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="HO" ColumnName="HO" />
+          <ScalarProperty Name="MAGV" ColumnName="MAGV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GiaoVien_DangKy">
+      <EntityTypeMapping TypeName="DETHI_DBModel.GiaoVien_DangKy">
+        <MappingFragment StoreEntitySet="GiaoVien_DangKy">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="THOIGIAN" ColumnName="THOIGIAN" />
+          <ScalarProperty Name="SOCAUTHI" ColumnName="SOCAUTHI" />
+          <ScalarProperty Name="LAN" ColumnName="LAN" />
+          <ScalarProperty Name="NGAYTHI" ColumnName="NGAYTHI" />
+          <ScalarProperty Name="TRINHDO" ColumnName="TRINHDO" />
+          <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+          <ScalarProperty Name="MAGV" ColumnName="MAGV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Khoas">
+      <EntityTypeMapping TypeName="DETHI_DBModel.Khoa">
+        <MappingFragment StoreEntitySet="Khoa">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="MACS" ColumnName="MACS" />
+          <ScalarProperty Name="TENKH" ColumnName="TENKH" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="DETHI_DBModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lops">
+      <EntityTypeMapping TypeName="DETHI_DBModel.Lop">
+        <MappingFragment StoreEntitySet="Lop">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="TENLOP" ColumnName="TENLOP" />
+          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonHocs">
+      <EntityTypeMapping TypeName="DETHI_DBModel.MonHoc">
+        <MappingFragment StoreEntitySet="MonHoc">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="TENMH" ColumnName="TENMH" />
+          <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SinhViens">
+      <EntityTypeMapping TypeName="DETHI_DBModel.SinhVien">
+        <MappingFragment StoreEntitySet="SinhVien">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="MALOP" ColumnName="MALOP" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="TEN" ColumnName="TEN" />
+          <ScalarProperty Name="HO" ColumnName="HO" />
+          <ScalarProperty Name="MASV" ColumnName="MASV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KQ_Thi">
+      <EntityTypeMapping TypeName="DETHI_DBModel.KQ_Thi">
+        <MappingFragment StoreEntitySet="KQ_Thi">
+          <ScalarProperty Name="rowguid" ColumnName="rowguid" />
+          <ScalarProperty Name="NgayThi" ColumnName="NgayThi" />
+          <ScalarProperty Name="Correct" ColumnName="Correct" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="DAPAN" ColumnName="DAPAN" />
+          <ScalarProperty Name="CHOSE" ColumnName="CHOSE" />
+          <ScalarProperty Name="CAUHOI" ColumnName="CAUHOI" />
+          <ScalarProperty Name="LAN" ColumnName="LAN" />
+          <ScalarProperty Name="MAMH" ColumnName="MAMH" />
+          <ScalarProperty Name="MSV" ColumnName="MSV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_kiemtraMaGV1" FunctionName="DETHI_DBModel.Store.sp_kiemtraMaGV" />
+    <FunctionImportMapping FunctionImportName="sp_kiemtraMaKhoa1" FunctionName="DETHI_DBModel.Store.sp_kiemtraMaKhoa" />
+    <FunctionImportMapping FunctionImportName="sp_kiemtraMaLop1" FunctionName="DETHI_DBModel.Store.sp_kiemtraMaLop" />
+    <FunctionImportMapping FunctionImportName="sp_kiemtraMaSV1" FunctionName="DETHI_DBModel.Store.sp_kiemtraMaSV" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6876640c7d674691a7ce2cbda1ebac5d" Name="Diagram1" ZoomLevel="91">
+        <EntityTypeShape EntityType="DETHI_DBModel.BangDiem" Width="1.5" PointX="6" PointY="5.5" />
+        <EntityTypeShape EntityType="DETHI_DBModel.BoDe" Width="1.5" PointX="6" PointY="1.125" />
+        <EntityTypeShape EntityType="DETHI_DBModel.CoSo" Width="1.5" PointX="1.5" PointY="9.875" />
+        <EntityTypeShape EntityType="DETHI_DBModel.GiaoVien" Width="1.5" PointX="3.75" PointY="1.5" />
+        <EntityTypeShape EntityType="DETHI_DBModel.GiaoVien_DangKy" Width="1.5" PointX="3" PointY="5.25" />
+        <EntityTypeShape EntityType="DETHI_DBModel.Khoa" Width="1.5" PointX="1.5" PointY="1.75" />
+        <EntityTypeShape EntityType="DETHI_DBModel.Login" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DETHI_DBModel.Lop" Width="1.5" PointX="1.5" PointY="13.75" />
+        <EntityTypeShape EntityType="DETHI_DBModel.MonHoc" Width="1.5" PointX="0.75" PointY="5.875" />
+        <EntityTypeShape EntityType="DETHI_DBModel.SinhVien" Width="1.5" PointX="3.75" PointY="13.5" />
+        <AssociationConnector Association="DETHI_DBModel.FK__BangDiem__MAMH__34C8D9D1" />
+        <AssociationConnector Association="DETHI_DBModel.FK__BangDiem__MASV__35BCFE0A" />
+        <AssociationConnector Association="DETHI_DBModel.FK__BoDe__MAGV__31EC6D26" />
+        <AssociationConnector Association="DETHI_DBModel.FK__BoDe__MAMH__2F10007B" />
+        <AssociationConnector Association="DETHI_DBModel.FK__Khoa__MACS__145C0A3F" />
+        <AssociationConnector Association="DETHI_DBModel.FK__GiaoVien__MAKH__22AA2996" />
+        <AssociationConnector Association="DETHI_DBModel.FK__GiaoVien_D__MAGV__25869641" />
+        <AssociationConnector Association="DETHI_DBModel.FK__GiaoVien___MALOP__267ABA7A" />
+        <AssociationConnector Association="DETHI_DBModel.FK__GiaoVien_D__MAMH__276EDEB3" />
+        <AssociationConnector Association="DETHI_DBModel.FK__Lop__MAKH__182C9B23" />
+        <AssociationConnector Association="DETHI_DBModel.FK__SinhVien__MALOP__1DE57479" />
+        <EntityTypeShape EntityType="DETHI_DBModel.KQ_Thi" Width="1.5" PointX="8.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DETHI_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DETHI_DBEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_test" ReturnType="Collection(Int32)">
+      <Parameter Name="MASV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_kiemtraMaKhoa" ReturnType="Collection(Int32)">
+      <Parameter Name="MAKH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_kiemtraMaGV" ReturnType="Collection(Int32)">
+      <Parameter Name="MAGV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_kiemtraMaLop" ReturnType="Collection(Int32)">
+      <Parameter Name="MALOP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_kiemtraMaSV" ReturnType="Collection(Int32)">
+      <Parameter Name="MASV" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="BangDiems" EntityType="DETHI_DBModel.BangDiem" />
+    <EntitySet Name="BoDes" EntityType="DETHI_DBModel.BoDe" />
+    <EntitySet Name="CoSoes" EntityType="DETHI_DBModel.CoSo" />
+    <EntitySet Name="GiaoViens" EntityType="DETHI_DBModel.GiaoVien" />
+    <EntitySet Name="GiaoVien_DangKy" EntityType="DETHI_DBModel.GiaoVien_DangKy" />
+    <EntitySet Name="Khoas" EntityType="DETHI_DBModel.Khoa" />
+    <EntitySet Name="Logins" EntityType="DETHI_DBModel.Login" />
+    <EntitySet Name="Lops" EntityType="DETHI_DBModel.Lop" />
+    <EntitySet Name="MonHocs" EntityType="DETHI_DBModel.MonHoc" />
+    <EntitySet Name="SinhViens" EntityType="DETHI_DBModel.SinhVien" />
+    <AssociationSet Name="FK__BangDiem__MAMH__34C8D9D1" Association="DETHI_DBModel.FK__BangDiem__MAMH__34C8D9D1">
+      <End Role="MonHoc" EntitySet="MonHocs" />
+      <End Role="BangDiem" EntitySet="BangDiems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BangDiem__MASV__35BCFE0A" Association="DETHI_DBModel.FK__BangDiem__MASV__35BCFE0A">
+      <End Role="SinhVien" EntitySet="SinhViens" />
+      <End Role="BangDiem" EntitySet="BangDiems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BoDe__MAGV__31EC6D26" Association="DETHI_DBModel.FK__BoDe__MAGV__31EC6D26">
+      <End Role="GiaoVien" EntitySet="GiaoViens" />
+      <End Role="BoDe" EntitySet="BoDes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BoDe__MAMH__2F10007B" Association="DETHI_DBModel.FK__BoDe__MAMH__2F10007B">
+      <End Role="MonHoc" EntitySet="MonHocs" />
+      <End Role="BoDe" EntitySet="BoDes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Khoa__MACS__145C0A3F" Association="DETHI_DBModel.FK__Khoa__MACS__145C0A3F">
+      <End Role="CoSo" EntitySet="CoSoes" />
+      <End Role="Khoa" EntitySet="Khoas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GiaoVien__MAKH__22AA2996" Association="DETHI_DBModel.FK__GiaoVien__MAKH__22AA2996">
+      <End Role="Khoa" EntitySet="Khoas" />
+      <End Role="GiaoVien" EntitySet="GiaoViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GiaoVien_D__MAGV__25869641" Association="DETHI_DBModel.FK__GiaoVien_D__MAGV__25869641">
+      <End Role="GiaoVien" EntitySet="GiaoViens" />
+      <End Role="GiaoVien_DangKy" EntitySet="GiaoVien_DangKy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GiaoVien___MALOP__267ABA7A" Association="DETHI_DBModel.FK__GiaoVien___MALOP__267ABA7A">
+      <End Role="Lop" EntitySet="Lops" />
+      <End Role="GiaoVien_DangKy" EntitySet="GiaoVien_DangKy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__GiaoVien_D__MAMH__276EDEB3" Association="DETHI_DBModel.FK__GiaoVien_D__MAMH__276EDEB3">
+      <End Role="MonHoc" EntitySet="MonHocs" />
+      <End Role="GiaoVien_DangKy" EntitySet="GiaoVien_DangKy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Lop__MAKH__182C9B23" Association="DETHI_DBModel.FK__Lop__MAKH__182C9B23">
+      <End Role="Khoa" EntitySet="Khoas" />
+      <End Role="Lop" EntitySet="Lops" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SinhVien__MALOP__1DE57479" Association="DETHI_DBModel.FK__SinhVien__MALOP__1DE57479">
+      <End Role="Lop" EntitySet="Lops" />
+      <End Role="SinhVien" EntitySet="SinhViens" />
+    </AssociationSet>
+    <EntitySet Name="KQ_Thi" EntityType="DETHI_DBModel.KQ_Thi" />
+    <FunctionImport Name="sp_kiemtraMaGV1" ReturnType="Collection(Int32)">
+      <Parameter Name="MAGV" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_kiemtraMaKhoa1" ReturnType="Collection(Int32)">
+      <Parameter Name="MAKH" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_kiemtraMaLop1" ReturnType="Collection(Int32)">
+      <Parameter Name="MALOP" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_kiemtraMaSV1" ReturnType="Collection(Int32)">
+      <Parameter Name="MASV" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="BangDiem">
+    <Key>
+      <PropertyRef Name="MAMH" />
+      <PropertyRef Name="MASV" />
+      <PropertyRef Name="LAN" />
+    </Key>
+    <Property Name="MAMH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="MASV" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="LAN" Type="Int16" Nullable="false" />
+    <Property Name="NGAYTHI" Type="DateTime" Precision="3" />
+    <Property Name="DIEM" Type="Double" />
+    <Property Name="BAITHI" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="MonHoc" Relationship="DETHI_DBModel.FK__BangDiem__MAMH__34C8D9D1" FromRole="BangDiem" ToRole="MonHoc" />
+    <NavigationProperty Name="SinhVien" Relationship="DETHI_DBModel.FK__BangDiem__MASV__35BCFE0A" FromRole="BangDiem" ToRole="SinhVien" />
+  </EntityType>
+  <EntityType Name="BoDe">
+    <Key>
+      <PropertyRef Name="CAUHOI" />
+    </Key>
+    <Property Name="CAUHOI" Type="Int32" Nullable="false" />
+    <Property Name="MAMH" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="TRINHDO" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="NOIDUNG" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="A" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="B" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="C" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="D" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="DAPAN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MAGV" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="GiaoVien" Relationship="DETHI_DBModel.FK__BoDe__MAGV__31EC6D26" FromRole="BoDe" ToRole="GiaoVien" />
+    <NavigationProperty Name="MonHoc" Relationship="DETHI_DBModel.FK__BoDe__MAMH__2F10007B" FromRole="BoDe" ToRole="MonHoc" />
+  </EntityType>
+  <EntityType Name="CoSo">
+    <Key>
+      <PropertyRef Name="MACS" />
+    </Key>
+    <Property Name="MACS" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="TENCS" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="DIACHI" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Khoas" Relationship="DETHI_DBModel.FK__Khoa__MACS__145C0A3F" FromRole="CoSo" ToRole="Khoa" />
+  </EntityType>
+  <EntityType Name="GiaoVien">
+    <Key>
+      <PropertyRef Name="MAGV" />
+    </Key>
+    <Property Name="MAGV" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="HO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TEN" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HOCVI" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MAKH" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="BoDes" Relationship="DETHI_DBModel.FK__BoDe__MAGV__31EC6D26" FromRole="GiaoVien" ToRole="BoDe" />
+    <NavigationProperty Name="Khoa" Relationship="DETHI_DBModel.FK__GiaoVien__MAKH__22AA2996" FromRole="GiaoVien" ToRole="Khoa" />
+    <NavigationProperty Name="GiaoVien_DangKy" Relationship="DETHI_DBModel.FK__GiaoVien_D__MAGV__25869641" FromRole="GiaoVien" ToRole="GiaoVien_DangKy" />
+  </EntityType>
+  <EntityType Name="GiaoVien_DangKy">
+    <Key>
+      <PropertyRef Name="MALOP" />
+      <PropertyRef Name="MAMH" />
+      <PropertyRef Name="LAN" />
+    </Key>
+    <Property Name="MAGV" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="MALOP" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="MAMH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="TRINHDO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="NGAYTHI" Type="DateTime" Precision="3" />
+    <Property Name="LAN" Type="Int16" Nullable="false" />
+    <Property Name="SOCAUTHI" Type="Int16" />
+    <Property Name="THOIGIAN" Type="Int16" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="GiaoVien" Relationship="DETHI_DBModel.FK__GiaoVien_D__MAGV__25869641" FromRole="GiaoVien_DangKy" ToRole="GiaoVien" />
+    <NavigationProperty Name="Lop" Relationship="DETHI_DBModel.FK__GiaoVien___MALOP__267ABA7A" FromRole="GiaoVien_DangKy" ToRole="Lop" />
+    <NavigationProperty Name="MonHoc" Relationship="DETHI_DBModel.FK__GiaoVien_D__MAMH__276EDEB3" FromRole="GiaoVien_DangKy" ToRole="MonHoc" />
+  </EntityType>
+  <EntityType Name="Khoa">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="TENKH" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MACS" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="CoSo" Relationship="DETHI_DBModel.FK__Khoa__MACS__145C0A3F" FromRole="Khoa" ToRole="CoSo" />
+    <NavigationProperty Name="GiaoViens" Relationship="DETHI_DBModel.FK__GiaoVien__MAKH__22AA2996" FromRole="Khoa" ToRole="GiaoVien" />
+    <NavigationProperty Name="Lops" Relationship="DETHI_DBModel.FK__Lop__MAKH__182C9B23" FromRole="Khoa" ToRole="Lop" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Lop">
+    <Key>
+      <PropertyRef Name="MALOP" />
+    </Key>
+    <Property Name="MALOP" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="TENLOP" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MAKH" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="GiaoVien_DangKy" Relationship="DETHI_DBModel.FK__GiaoVien___MALOP__267ABA7A" FromRole="Lop" ToRole="GiaoVien_DangKy" />
+    <NavigationProperty Name="Khoa" Relationship="DETHI_DBModel.FK__Lop__MAKH__182C9B23" FromRole="Lop" ToRole="Khoa" />
+    <NavigationProperty Name="SinhViens" Relationship="DETHI_DBModel.FK__SinhVien__MALOP__1DE57479" FromRole="Lop" ToRole="SinhVien" />
+  </EntityType>
+  <EntityType Name="MonHoc">
+    <Key>
+      <PropertyRef Name="MAMH" />
+    </Key>
+    <Property Name="MAMH" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="true" />
+    <Property Name="TENMH" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="BangDiems" Relationship="DETHI_DBModel.FK__BangDiem__MAMH__34C8D9D1" FromRole="MonHoc" ToRole="BangDiem" />
+    <NavigationProperty Name="BoDes" Relationship="DETHI_DBModel.FK__BoDe__MAMH__2F10007B" FromRole="MonHoc" ToRole="BoDe" />
+    <NavigationProperty Name="GiaoVien_DangKy" Relationship="DETHI_DBModel.FK__GiaoVien_D__MAMH__276EDEB3" FromRole="MonHoc" ToRole="GiaoVien_DangKy" />
+  </EntityType>
+  <EntityType Name="SinhVien">
+    <Key>
+      <PropertyRef Name="MASV" />
+    </Key>
+    <Property Name="MASV" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="HO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TEN" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="3" />
+    <Property Name="DIACHI" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="MALOP" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="BangDiems" Relationship="DETHI_DBModel.FK__BangDiem__MASV__35BCFE0A" FromRole="SinhVien" ToRole="BangDiem" />
+    <NavigationProperty Name="Lop" Relationship="DETHI_DBModel.FK__SinhVien__MALOP__1DE57479" FromRole="SinhVien" ToRole="Lop" />
+  </EntityType>
+  <Association Name="FK__BangDiem__MAMH__34C8D9D1">
+    <End Type="DETHI_DBModel.MonHoc" Role="MonHoc" Multiplicity="1" />
+    <End Type="DETHI_DBModel.BangDiem" Role="BangDiem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonHoc">
+        <PropertyRef Name="MAMH" />
+      </Principal>
+      <Dependent Role="BangDiem">
+        <PropertyRef Name="MAMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BangDiem__MASV__35BCFE0A">
+    <End Type="DETHI_DBModel.SinhVien" Role="SinhVien" Multiplicity="1" />
+    <End Type="DETHI_DBModel.BangDiem" Role="BangDiem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SinhVien">
+        <PropertyRef Name="MASV" />
+      </Principal>
+      <Dependent Role="BangDiem">
+        <PropertyRef Name="MASV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BoDe__MAGV__31EC6D26">
+    <End Type="DETHI_DBModel.GiaoVien" Role="GiaoVien" Multiplicity="0..1" />
+    <End Type="DETHI_DBModel.BoDe" Role="BoDe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiaoVien">
+        <PropertyRef Name="MAGV" />
+      </Principal>
+      <Dependent Role="BoDe">
+        <PropertyRef Name="MAGV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BoDe__MAMH__2F10007B">
+    <End Type="DETHI_DBModel.MonHoc" Role="MonHoc" Multiplicity="0..1" />
+    <End Type="DETHI_DBModel.BoDe" Role="BoDe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonHoc">
+        <PropertyRef Name="MAMH" />
+      </Principal>
+      <Dependent Role="BoDe">
+        <PropertyRef Name="MAMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Khoa__MACS__145C0A3F">
+    <End Type="DETHI_DBModel.CoSo" Role="CoSo" Multiplicity="0..1" />
+    <End Type="DETHI_DBModel.Khoa" Role="Khoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoSo">
+        <PropertyRef Name="MACS" />
+      </Principal>
+      <Dependent Role="Khoa">
+        <PropertyRef Name="MACS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GiaoVien__MAKH__22AA2996">
+    <End Type="DETHI_DBModel.Khoa" Role="Khoa" Multiplicity="0..1" />
+    <End Type="DETHI_DBModel.GiaoVien" Role="GiaoVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Khoa">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="GiaoVien">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GiaoVien_D__MAGV__25869641">
+    <End Type="DETHI_DBModel.GiaoVien" Role="GiaoVien" Multiplicity="0..1" />
+    <End Type="DETHI_DBModel.GiaoVien_DangKy" Role="GiaoVien_DangKy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiaoVien">
+        <PropertyRef Name="MAGV" />
+      </Principal>
+      <Dependent Role="GiaoVien_DangKy">
+        <PropertyRef Name="MAGV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GiaoVien___MALOP__267ABA7A">
+    <End Type="DETHI_DBModel.Lop" Role="Lop" Multiplicity="1" />
+    <End Type="DETHI_DBModel.GiaoVien_DangKy" Role="GiaoVien_DangKy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lop">
+        <PropertyRef Name="MALOP" />
+      </Principal>
+      <Dependent Role="GiaoVien_DangKy">
+        <PropertyRef Name="MALOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__GiaoVien_D__MAMH__276EDEB3">
+    <End Type="DETHI_DBModel.MonHoc" Role="MonHoc" Multiplicity="1" />
+    <End Type="DETHI_DBModel.GiaoVien_DangKy" Role="GiaoVien_DangKy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MonHoc">
+        <PropertyRef Name="MAMH" />
+      </Principal>
+      <Dependent Role="GiaoVien_DangKy">
+        <PropertyRef Name="MAMH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Lop__MAKH__182C9B23">
+    <End Type="DETHI_DBModel.Khoa" Role="Khoa" Multiplicity="0..1" />
+    <End Type="DETHI_DBModel.Lop" Role="Lop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Khoa">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="Lop">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SinhVien__MALOP__1DE57479">
+    <End Type="DETHI_DBModel.Lop" Role="Lop" Multiplicity="0..1" />
+    <End Type="DETHI_DBModel.SinhVien" Role="SinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lop">
+        <PropertyRef Name="MALOP" />
+      </Principal>
+      <Dependent Role="SinhVien">
+        <PropertyRef Name="MALOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="KQ_Thi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="MSV" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="MAMH" Type="String" MaxLength="8" FixedLength="true" Unicode="true" />
+    <Property Name="LAN" Type="Int32" />
+    <Property Name="CAUHOI" Type="Int32" />
+    <Property Name="CHOSE" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="DAPAN" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Correct" Type="Int32" />
+    <Property Name="NgayThi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+  </EntityType>
+</Schema>
