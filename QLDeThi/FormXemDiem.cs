@@ -43,7 +43,8 @@ namespace QLDeThi
                 String MaMH = dgvMonHoc.Rows[index].Cells[2].Value.ToString();
                 String Lan = dgvMonHoc.Rows[index].Cells[5].Value.ToString();
                 String Ngaythi = dgvMonHoc.Rows[index].Cells[4].Value.ToString();
-                dgvBaiNop.DataSource = db.BangDiems.Where(p => p.MAMH.Contains(MaMH)).Select(p => new { p.MASV, p.DIEM, p.BAITHI }).ToList();
+                bool result = db.BangDiems.First().NGAYTHI.ToString() == Ngaythi;
+                dgvBaiNop.DataSource = db.BangDiems.Where(p => p.MAMH.Contains(MaMH)&&result==true ).Select(p => new { p.MASV, p.DIEM}).ToList();
 
             }
         }

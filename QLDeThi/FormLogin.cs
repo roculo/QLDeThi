@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Core.EntityClient;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +16,7 @@ namespace QLDeThi
 {
     public partial class FormLogin : Form
     {
+       
         public static String MGV,MSSV;
         DETHI_DBEntities db = new DETHI_DBEntities();
         public FormLogin()
@@ -22,12 +27,15 @@ namespace QLDeThi
             txtMGV.Text = "CNTT01  ";
             txtGvPass.Text = "123";
         }
+     
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             if(rbnCS1.Checked==true)
             {
-
+                FormMenuCS newform = new FormMenuCS();
+                newform.Show();
+                this.Hide();
             }
             if (rbnCS2.Checked == true)
             {
@@ -35,6 +43,7 @@ namespace QLDeThi
             }
             if (rbnTruong.Checked == true)
             {
+             
                 FormMenuCS newform = new FormMenuCS();
                 newform.Show();
                 this.Hide();
